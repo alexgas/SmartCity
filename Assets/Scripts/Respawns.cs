@@ -5,27 +5,31 @@ using UnityEngine;
 public class Respawns : MonoBehaviour
 {
     public GameObject[] edificios;
-    public Vector3 spawnValues;
+    public Vector3[,] spawnValues;
+    public int large;
     public float spawnWait;
     public float spawnMaxWait;
     public float spawnMinWait;
     public int startWait;
-    public boolean end;
-
+    bool found = false;
+    public bool end;
+    int size;
+    List<GameObject> grid;
+   GameObject gridItem;
+    public GameObject respawnee;
 
     // Start is called before the first frame update
     void Start()
     {
-        int rand = Random.Range(0, respawns.Length);
-        Instantiate(respawns[rand], transform.position, Quaternion.identity);
-        
+        spawnValues = new Vector3[10,10];
+        size = 0;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     IEnumerator waitSpawner()
@@ -33,9 +37,14 @@ public class Respawns : MonoBehaviour
         yield return new WaitForSeconds(startWait);
         while (!end)
         {
-            Vector3 spawnPosition= new Vector3(Random.Range(0,10)*10, 0 ,Random.Range(0,10)*10);
-
+            int rand = Random.Range(0, grid.Capacity);
+            gridItem = grid[rand];
+            Instantiate(respawnee, gridItem.transform.position, gridItem.transform.rotation);
+            grid.Remove(gridItem);
+            //Destroy
         }
     }
-
+    
 }
+
+    
