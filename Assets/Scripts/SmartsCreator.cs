@@ -26,7 +26,7 @@ public class SmartsCreator : MonoBehaviour
 		 //hand	ler del click en menu ui
 		panel.SetActive(false);
 			Debug.Log("Rotation: " + gridItem.transform.rotation);
-		 Vector3 pos = new Vector3(gridItem.transform.position.x, gridItem.transform.position.y + 1.33f, gridItem.transform.position.z);
+		 Vector3 pos = new Vector3(gridItem.transform.position.x, gridItem.transform.position.y + 1.33f, gridItem.transform.position.z + 2f);
 		 GameObject instance = null;
 		  switch (tag)
             {
