@@ -54,8 +54,8 @@ public class Life : MonoBehaviour
                     break;
                 case "house3":
                     contaminacion += 10;
-                    agua -= 10;
-                    electricidad -= 10;
+                    agua -= 7;
+                    electricidad -= 7;
 					Global.money += 200;
                     break;
                 default:
@@ -73,10 +73,10 @@ public class Life : MonoBehaviour
         for(int i = 0; i < Global.smarts.Count; i++)
         {
 
-         //   Debug.Log(Global.money);
-			//Debug.Log("Contaminación: " + contaminacion);
-			//Debug.Log("Electricidad: " + electricidad);
-			//Debug.Log("Agua: " + agua);
+            Debug.Log(Global.money);
+			Debug.Log("Contaminación: " + contaminacion);
+			Debug.Log("Electricidad: " + electricidad);
+			Debug.Log("Agua: " + agua);
          //  Debug.Log("Tag del elemtento " + i + ": " + Global.smarts[i].tag);
             switch (Global.smarts[i].tag)
             {
