@@ -36,7 +36,6 @@ public class Respawns : MonoBehaviour
             try
             {
                 
-               
                 int rand = Random.Range(0, Global.grid.Count);
                 gridItem = Global.grid[rand];
                 //en caso de que queramos que no se meta el primer modelo de casa, meter Random en el instantiate.
@@ -50,7 +49,6 @@ public class Respawns : MonoBehaviour
                
             }
 
-            //Destroy
         }
     }
     
