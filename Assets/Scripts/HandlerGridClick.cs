@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class HandlerGridClick : MonoBehaviour
 {
-
 	 void OnCollisionEnter(Collision collision)
     {
 		Destroy (this.gameObject);
 	}
 	
-	 void OnMouseDown(){
+	 void OnMouseUp(){
 		//Abrir 
+		
 		GameObject go = GameObject.Find("ScriptSmartCreator");
 		SmartsCreator sn = go.GetComponent<SmartsCreator>();
 
