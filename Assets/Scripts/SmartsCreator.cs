@@ -11,22 +11,22 @@ public class SmartsCreator : MonoBehaviour
 	 public void openMenu(GameObject gridItemParam){
 		
 		//smartMenuUi.setActive(true);
-		 Debug.Log("open menu. Object: " + gridItemParam);
 
 		gridItem = gridItemParam;
 	 }
 	 public void onClickSmartSelection(string tag){
 		 //handler del click en menu ui
-		 Debug.Log(gridItem + "" + tag);
 		 Vector3 pos = new Vector3(gridItem.transform.position.x, gridItem.transform.position.y + 1.33f, gridItem.transform.position.z);
 		 GameObject instance = null;
 		  switch (tag)
             {
-                case "solar":
+                case "Solar":
 					instance = Instantiate(models[0], pos, gridItem.transform.rotation);
+					Global.money -= 300;
 					break;
-				case "water":
+				case "Water":
 					instance = Instantiate(models[1], pos, gridItem.transform.rotation);
+					Global.money -= 300;
 					break;
 				default: 
 					break;
@@ -35,7 +35,6 @@ public class SmartsCreator : MonoBehaviour
 			Global.smarts.Add(instance);
 		 }
 
-   // this object was clicked - do something
  }
  
 }
