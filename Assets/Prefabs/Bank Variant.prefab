@@ -36,10 +36,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 100000, guid: 3eedb57cbe6114a488fee637e97b46d6, type: 3}
-      propertyPath: m_Name
-      value: Bank
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3eedb57cbe6114a488fee637e97b46d6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.797615
@@ -83,6 +79,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 3eedb57cbe6114a488fee637e97b46d6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3eedb57cbe6114a488fee637e97b46d6, type: 3}
+      propertyPath: m_Name
+      value: Bank Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3eedb57cbe6114a488fee637e97b46d6, type: 3}
+      propertyPath: m_TagString
+      value: house2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3eedb57cbe6114a488fee637e97b46d6, type: 3}

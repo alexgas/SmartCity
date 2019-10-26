@@ -38,11 +38,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1977470886905136, guid: 31d5af46872794c47831f7a6da72a909, type: 3}
       propertyPath: m_Name
-      value: Small building
+      value: Small building Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1977470886905136, guid: 31d5af46872794c47831f7a6da72a909, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977470886905136, guid: 31d5af46872794c47831f7a6da72a909, type: 3}
+      propertyPath: m_TagString
+      value: house1
       objectReference: {fileID: 0}
     - target: {fileID: 4095166521722786, guid: 31d5af46872794c47831f7a6da72a909, type: 3}
       propertyPath: m_LocalPosition.x
