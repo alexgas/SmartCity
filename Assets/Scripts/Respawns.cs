@@ -12,7 +12,7 @@ public class Respawns : MonoBehaviour
     public bool end;
     List<GameObject> grid = Global.grid;
     GameObject gridItem;
-    List<GameObject> buildings= new List<GameObject>();
+    
     // Start is called before the first frame update
 
 
@@ -44,19 +44,14 @@ public class Respawns : MonoBehaviour
                 //en caso de que queramos que no se meta el primer modelo de casa, meter Random en el instantiate.
                 Vector3 pos = new Vector3(gridItem.transform.position.x, gridItem.transform.position.y + 1.33f, gridItem.transform.position.z);
                 GameObject instance = Instantiate(models[0], pos, gridItem.transform.rotation);
-                buildings.Add(instance);
-                Debug.Log(buildings);
+                Global.houses.Add(instance);
                 Global.grid.RemoveAt(rand);
             }
             catch
             {
                
             }
-           
 
-
-            
-           
             //Destroy
         }
     }
