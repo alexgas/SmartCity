@@ -44,16 +44,19 @@ public class Life : MonoBehaviour
                     contaminacion += 3;
                     agua -= 3;
                     electricidad -= 3;
+					Global.money += 100;
                     break;
                 case "house2":
                     contaminacion += 5;
                     agua -= 5;
                     electricidad -= 5;
+					Global.money += 150;
                     break;
                 case "house3":
                     contaminacion += 10;
                     agua -= 10;
                     electricidad -= 10;
+					Global.money += 200;
                     break;
                 default:
                     break;

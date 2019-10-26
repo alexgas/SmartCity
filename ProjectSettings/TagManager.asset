@@ -8,6 +8,7 @@ TagManager:
   - house1
   - house2
   - house3
+  - ScriptSmartCreator
   layers:
   - Default
   - TransparentFX
