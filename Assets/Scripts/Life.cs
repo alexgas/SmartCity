@@ -32,6 +32,10 @@ public class Life : MonoBehaviour
     {
         for(int i = 0; i < Global.houses.Count; i++)
         {
+
+
+            Debug.Log(Global.money);
+            Debug.Log(Global.houses[i].tag);
             switch (Global.houses[i].tag)
             {
                 case "casa1":
@@ -53,9 +57,11 @@ public class Life : MonoBehaviour
                     break;
             }
         }
-        contaminacion += 1;
-        agua -= 1;
-        electricidad -= 1;
+
+
+        //contaminacion += 1;
+        //agua -= 1;
+        //electricidad -= 1;
 
         contaminacionSlider.value = contaminacion;
         aguaSlider.value = agua;
