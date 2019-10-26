@@ -127,7 +127,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 0ae8d45dc8f27d544820653040a3b108, type: 3}
       propertyPath: m_Name
-      value: Apartments
+      value: Apartments Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0ae8d45dc8f27d544820653040a3b108, type: 3}
+      propertyPath: m_TagString
+      value: house3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ae8d45dc8f27d544820653040a3b108, type: 3}
       propertyPath: m_LocalPosition.x
