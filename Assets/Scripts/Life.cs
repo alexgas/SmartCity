@@ -30,9 +30,38 @@ public class Life : MonoBehaviour
 
     public void contamina()
     {
-        contaminacion += 1;
-        agua -= 1;
-        electricidad -= 1;
+        for(int i = 0; i < Global.houses.Count; i++)
+        {
+
+
+            Debug.Log(Global.money);
+            Debug.Log(Global.houses[i].tag);
+            switch (Global.houses[i].tag)
+            {
+                case "casa1":
+                    contaminacion += 1;
+                    agua -= 1;
+                    electricidad -= 1;
+                    break;
+                case "casa2":
+                    contaminacion += 3;
+                    agua -= 3;
+                    electricidad -= 3;
+                    break;
+                case "casa3":
+                    contaminacion += 5;
+                    agua -= 5;
+                    electricidad -= 5;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+
+        //contaminacion += 1;
+        //agua -= 1;
+        //electricidad -= 1;
 
         contaminacionSlider.value = contaminacion;
         aguaSlider.value = agua;
