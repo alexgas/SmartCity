@@ -44,16 +44,19 @@ public class Life : MonoBehaviour
                     contaminacion += 3;
                     agua -= 3;
                     electricidad -= 3;
+					Global.money += 100;
                     break;
                 case "house2":
                     contaminacion += 5;
                     agua -= 5;
                     electricidad -= 5;
+					Global.money += 150;
                     break;
                 case "house3":
                     contaminacion += 10;
                     agua -= 10;
                     electricidad -= 10;
+					Global.money += 200;
                     break;
                 default:
                     break;
@@ -65,9 +68,40 @@ public class Life : MonoBehaviour
         elecSlider.value = electricidad;
     }
 
+	public void produce() {
+	//Debug.Log("Cantidad de casas: " + Global.houses.Count);
+        for(int i = 0; i < Global.smarts.Count; i++)
+        {
+
+         //   Debug.Log(Global.money);
+			//Debug.Log("Contaminación: " + contaminacion);
+			//Debug.Log("Electricidad: " + electricidad);
+			//Debug.Log("Agua: " + agua);
+         //  Debug.Log("Tag del elemtento " + i + ": " + Global.smarts[i].tag);
+            switch (Global.smarts[i].tag)
+            {
+                case "Solar":
+                    contaminacion -= 3;
+                    electricidad += 3;
+                    break;
+                case "Water":
+                    contaminacion -= 3;
+                    agua += 3;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        contaminacionSlider.value = contaminacion;
+        aguaSlider.value = agua;
+        elecSlider.value = electricidad;
+	}
+	
     void Start()
     {
         InvokeRepeating("contamina", 0, 5.0f);
+		InvokeRepeating("produce", 0, 5.0f);
     }
 
     // Update is called once per frame
