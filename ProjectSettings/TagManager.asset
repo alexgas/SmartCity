@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - grid
+  - house1
+  - house2
+  - house3
   layers:
   - Default
   - TransparentFX

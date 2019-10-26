@@ -9,10 +9,10 @@ public class Life : MonoBehaviour
     // Start is called before the first frame update
 
     public int contaminacion_inicial = 0;
-    public int contaminacion;
+    int contaminacion;
     public int electricidad_inicial = 50;
-    public int electricidad;
-    public int agua;
+    int electricidad;
+    int agua;
     public int agua_inicial = 50;
     public Slider contaminacionSlider;
     public Slider elecSlider;
@@ -24,44 +24,41 @@ public class Life : MonoBehaviour
         contaminacion = contaminacion_inicial;
         agua = agua_inicial;
         electricidad = electricidad_inicial;
-       
 
     }
 
     public void contamina()
     {
+		//Debug.Log("Cantidad de casas: " + Global.houses.Count);
         for(int i = 0; i < Global.houses.Count; i++)
         {
 
-
-            Debug.Log(Global.money);
-            Debug.Log(Global.houses[i].tag);
+         //   Debug.Log(Global.money);
+			//Debug.Log("Contaminación: " + contaminacion);
+			//Debug.Log("Electricidad: " + electricidad);
+			//Debug.Log("Agua: " + agua);
+          //  Debug.Log("Tag del elemtento " + i + ": " + Global.houses[i].tag);
             switch (Global.houses[i].tag)
             {
-                case "casa1":
-                    contaminacion += 1;
-                    agua -= 1;
-                    electricidad -= 1;
-                    break;
-                case "casa2":
+                case "house1":
                     contaminacion += 3;
                     agua -= 3;
                     electricidad -= 3;
                     break;
-                case "casa3":
+                case "house2":
                     contaminacion += 5;
                     agua -= 5;
                     electricidad -= 5;
+                    break;
+                case "house3":
+                    contaminacion += 10;
+                    agua -= 10;
+                    electricidad -= 10;
                     break;
                 default:
                     break;
             }
         }
-
-
-        //contaminacion += 1;
-        //agua -= 1;
-        //electricidad -= 1;
 
         contaminacionSlider.value = contaminacion;
         aguaSlider.value = agua;
@@ -76,6 +73,7 @@ public class Life : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		
         if(contaminacion>=100 || agua<=0 || electricidad<=0)
         {
             SceneManager.LoadScene("GameOver");

@@ -29,21 +29,19 @@ public class Respawns : MonoBehaviour
 
     IEnumerator waitSpawner()
     {
-        Debug.Log(Global.grid.Capacity);
+       
         while (!end)
         {
             yield return new WaitForSeconds(Random.Range(spawnMinWait, spawnMaxWait));
             try
             {
                 
-                Debug.Log("Tamaño: " + Global.grid.Count);
+               
                 int rand = Random.Range(0, Global.grid.Count);
-                Debug.Log(rand);
                 gridItem = Global.grid[rand];
-                Debug.Log(gridItem);
                 //en caso de que queramos que no se meta el primer modelo de casa, meter Random en el instantiate.
                 Vector3 pos = new Vector3(gridItem.transform.position.x, gridItem.transform.position.y + 1.33f, gridItem.transform.position.z);
-                GameObject instance = Instantiate(models[0], pos, gridItem.transform.rotation);
+                GameObject instance = Instantiate(models[Random.Range(0,3)], pos, gridItem.transform.rotation);
                 Global.houses.Add(instance);
                 Global.grid.RemoveAt(rand);
             }

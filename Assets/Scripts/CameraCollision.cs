@@ -5,7 +5,6 @@ using UnityEngine;
 public class CameraCollision : MonoBehaviour
 {
     [SerializeField]
-    private Transform camera;
     private int x;
     private int y;
     private int z;
@@ -21,8 +20,8 @@ public class CameraCollision : MonoBehaviour
     void Update()
     {
         transform.position = new Vector3(
-            Mathf.Clamp(camera.position.x, 0, 100),50,
-            Mathf.Clamp(camera.position.z, -170, -70)
+            Mathf.Clamp(this.gameObject.transform.position.x, 0, 100),50,
+            Mathf.Clamp(this.gameObject.transform.position.z, -170, -70)
             );
         
         
