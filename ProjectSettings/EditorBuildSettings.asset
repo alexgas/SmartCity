@@ -5,16 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SmartCityGas.unity
-    guid: cce7a710bbac8cd4086ce57bc5f4c1a9
-  - enabled: 1
-    path: Assets/Scenes/GameOver.unity
-    guid: 179fbee65c228ee4bbef24edfb90a383
   - enabled: 1
     path: Assets/Scenes/Inicio.unity
     guid: 5347f481ac6620945b11d4e476b0ae6c
   - enabled: 1
     path: Assets/Scenes/SmartCityFinal.unity
     guid: 3ced6ff43fd4bae43a1faec394d8cca9
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 179fbee65c228ee4bbef24edfb90a383
   m_configObjects: {}
