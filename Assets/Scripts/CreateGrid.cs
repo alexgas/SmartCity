@@ -12,7 +12,7 @@ public class CreateGrid : MonoBehaviour
     {
 		Debug.Log("run");
 		for (float x = gridItem.transform.position.x; x < (gridItem.transform.position.x + 100); x+=10){
-			for (float z = gridItem.transform.position.z; z > (gridItem.transform.position.z - 100); z-=10){
+			for (float z = gridItem.transform.position.z; z > (gridItem.transform.position.z - 95); z-=10){
 			
 		    GameObject gridCopy = Instantiate<GameObject>(gridItem, new Vector3(x,0.4f,z), new Quaternion(0,0,0,0));
 		

@@ -10,10 +10,10 @@ public class Life : MonoBehaviour
 
     public int contaminacion_inicial = 0;
     int contaminacion;
-    public int electricidad_inicial = 50;
+    public int electricidad_inicial = 100;
     int electricidad;
     int agua;
-    public int agua_inicial = 50;
+    public int agua_inicial = 100;
     public Slider contaminacionSlider;
     public Slider elecSlider;
     public Slider aguaSlider;
@@ -100,6 +100,7 @@ public class Life : MonoBehaviour
 	
     void Start()
     {
+        Debug.Log("Hola buenas tardes");
         InvokeRepeating("contamina", 0, 5.0f);
 		InvokeRepeating("produce", 0, 5.0f);
     }
@@ -110,6 +111,14 @@ public class Life : MonoBehaviour
 		
         if(contaminacion>=100 || agua<=0 || electricidad<=0)
         {
+            contaminacion = 0;
+            agua = 100;
+            electricidad = 100;
+            Global.money = 500;
+
+                 
+            Global.houses = new List<GameObject>();
+            Global.smarts = new List<GameObject>();
             SceneManager.LoadScene("GameOver");
         }
     }

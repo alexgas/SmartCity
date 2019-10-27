@@ -15,7 +15,8 @@ public class HandlerGridClick : MonoBehaviour
 		GameObject go = GameObject.Find("ScriptSmartCreator");
 		SmartsCreator sn = go.GetComponent<SmartsCreator>();
 
-		sn.openMenu(this.gameObject);
+        if(Global.money>=300)
+		    sn.openMenu(this.gameObject);
 
  }
  
